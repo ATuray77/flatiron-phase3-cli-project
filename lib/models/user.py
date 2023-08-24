@@ -10,7 +10,7 @@ class User(Base):
     phone= Column(String, nullable = False)
     email= Column(String, unique=True)
 
-    Cars = relationship("Car", backref="user") # relationship
+    cars = relationship("Car", backref="user") # relationship
 
 def __repr__(self):
     return f"\n<Artist" \

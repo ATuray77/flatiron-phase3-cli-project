@@ -10,7 +10,6 @@ class Car(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
 
 
-
     def __repr__(self):
         return f"\n<Song" \
             + f"id={self.id}, " \

@@ -15,7 +15,7 @@ class User(Base):
 def __repr__(self):
     return f"\n<Artist" \
         + f"id={self.id}, " \
-        + f"username={self.username}, "\
+        + f"username={self.username}, " \
         + f"name={self.name}, " \
         + f"phone={self.phone}, " \
         + f"email={self.email}, " \

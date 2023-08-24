@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from .base import Base
+from .session import session
 
 class Owner(Base):
     __tablename__ = "owners"
@@ -12,11 +13,11 @@ class Owner(Base):
 
     cars = relationship("Car", backref="owner") # relationship
 
-def __repr__(self):
-    return f"\n<Owner" \
-        + f"id={self.id}, " \
-        + f"username={self.username}, " \
-        + f"name={self.name}, " \
-        + f"phone={self.phone}, " \
-        + f"email={self.email}, " \
-        + ">"
+    def __repr__(self):
+        return f"\n<Owner" \
+            + f"id={self.id}, " \
+            + f"username={self.username}, " \
+            + f"name={self.name}, " \
+            + f"phone={self.phone}, " \
+            + f"email={self.email}, " \
+            + ">"

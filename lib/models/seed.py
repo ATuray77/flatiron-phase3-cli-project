@@ -13,3 +13,5 @@ session = Session()
 session.query(User).delete() # Reset DB
 session.query(Car).delete() # Reset DB
 session.commit()
+
+fake = Faker()

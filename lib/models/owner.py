@@ -6,8 +6,9 @@ from .session import session
 class Owner(Base):
     __tablename__ = "owners"
     id = Column(Integer, primary_key = True)
-    username = Column(String, nullable=False )
-    name = Column(String, nullable = False)
+    first_name = Column(String, nullable= False)
+    last_name = Column(String, nullable= False)
+    username = Column(String, unique=True, nullable=False )
     phone= Column(String, nullable = False)
     email= Column(String, unique=True)
 
@@ -16,8 +17,9 @@ class Owner(Base):
     def __repr__(self):
         return f"\n<Owner" \
             + f"id={self.id}, " \
+            + f"first_name={self.first_name}, " \
+            + f"last_name={self.last_name}, " \
             + f"username={self.username}, " \
-            + f"name={self.name}, " \
             + f"phone={self.phone}, " \
             + f"email={self.email}, " \
             + ">"

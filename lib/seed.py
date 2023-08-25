@@ -3,7 +3,9 @@ from models import Owner, Car
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from faker import Faker
+import requests
 import random
+import json
 
 fake = Faker()
 
@@ -26,11 +28,31 @@ for _ in range(10):
 
     owner = Owner(first_name=first_name, last_name=last_name, username = username, phone=phone, email = fake.ascii_email())
     print(owner)
+    session.add(owner)
+    session.commit()
 
-#  first_name 
-#     last_name
-#     username 
-#     phone
-#     email
 
-import ipdb; ipdb.set_trace
+cars = []
+makes_models = [
+    ("Toyota", "Camry"), 
+    ("Ford", "Mustang"), 
+    ("Cheverolet", "Camaro"), 
+    ("Honda", "Pilot"), 
+    ("Audi", "A4"), 
+    ("Hyundai", "Elantra"), 
+    ("Kia", "Golf"), 
+    ("Lexus", "ES"), 
+    ("BMW", "X6"), 
+    ("Teals", "Model 3")
+]
+color = ["white", "red", "green", "blue", "yellow", "purple", "brown", "pink", "grey", "black"]
+
+
+
+    # make 
+    # model
+    # color 
+    # license_plate
+
+
+    #import ipdb; ipdb.set_trace()

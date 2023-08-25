@@ -2,19 +2,22 @@ from simple_term_menu import TerminalMenu
 from prettycli import red, yellow, green
 #import ipdb; ipdb.set_trace()
 
-def main():
-    print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
-    options = ["Car Owner", "New Customer", "Add a car", "Exit!"]
-    terminal_menu = TerminalMenu(options)
-    menu_entry_index = terminal_menu.show()
-    #user_input = input("Please make a selection")
-    print(green(f"You have selected {options[menu_entry_index]}!"))
+class Cli():
+    def start(self):
+        print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
+        options = ["Car Owner", "New Customer", "Add a car", "Exit!"]
+        terminal_menu = TerminalMenu(options)
+        menu_entry_index = terminal_menu.show()
+        #user_input = input("Please make a selection")
+        print(green(f"You have selected {options[menu_entry_index]}!"))
 
     
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+    
+app = Cli()
+app.start()
 
 
 # def start():

@@ -2,7 +2,7 @@ from simple_term_menu import TerminalMenu
 
 def main():
     print("WELCOME TO TURAY'S PARKING GARAGE!\n")
-    options = ["Car Owner", "New Customer", "Exit!"]
+    options = ["Car Owner", "New Customer", "Add a car", "Exit!"]
     terminal_menu = TerminalMenu(options)
     menu_entry_index = terminal_menu.show()
     print(f"You have selected {options[menu_entry_index]}!")

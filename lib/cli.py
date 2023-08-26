@@ -10,6 +10,7 @@ class Cli():
         def ask(self, question):
             value = input(question)
             return value
+            
     
     def __init__(self):
         current_owner = None
@@ -29,7 +30,7 @@ class Cli():
 
         terminal_menu = TerminalMenu(options)
         menu_entry_index = terminal_menu.show()
-        print("The index of the option we chose was:", menu_entry_index)
+        #print("The index of the option we chose was:", menu_entry_index)
         print(green(f"You have selected {options[menu_entry_index]}!"))
 
         self.get_first_name()
@@ -39,9 +40,9 @@ class Cli():
 
     
     
-    def get_first_name():
-        name = prompt.ask("What is your first name?")
-        print(name)
+    def get_first_name(self):
+        name = prompt("What is your first name?")
+        print(f"WELCOME: {name}")
 
 if __name__ == "__main__":
     

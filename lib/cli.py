@@ -55,6 +55,11 @@ class Cli():
         name = prompt("What is your first name? ")
         yes_no = prompt(f"You entered {name}, is that correct y/n: ")
         print(f"WELCOME, {name}")
+
+        if yes_no:
+            print("Collect last_name")
+        else:
+            self.get_first_name()
     
     def get_car(self):
         mycar = prompt("What's the name of your car? ")

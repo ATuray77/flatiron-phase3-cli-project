@@ -5,11 +5,16 @@ from models import Owner, Car
 
 class Cli():
 
-
+    
 
     def start(self):
+        logged_in = True
+
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
-        options = ["Login", "Sign Up", "Car Owner", "New Customer", "Add a car", "Exit!"]
+        options = ["Sign Up", "Car Owner", "New Customer", "Add a car", "Exit!"]
+        if logged_in:
+            options.append("Login")
+
         terminal_menu = TerminalMenu(options)
         menu_entry_index = terminal_menu.show()
         print("The index of the option we chose was:", menu_entry_index)

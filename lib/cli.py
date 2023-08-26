@@ -2,6 +2,7 @@ from simple_term_menu import TerminalMenu
 from prettycli import red, yellow, green, blue
 from models import Owner, Car
 from prompt_toolkit import prompt
+#import prompt
 #import ipdb; ipdb.set_trace()
 
 class Cli():
@@ -10,6 +11,10 @@ class Cli():
         def ask(self, question):
             value = input(question)
             return value
+        # Addition
+        def yes_or_no(self, question):
+            value = input(question + "y/n")
+            return value == "y"
             
     
     def __init__(self):
@@ -20,6 +25,7 @@ class Cli():
         self.clear_screen(20)
     
         logged_in = False
+        
         
 
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
@@ -41,8 +47,11 @@ class Cli():
     
     
     def get_first_name(self):
-        name = prompt("What is your first name?")
-        print(f"WELCOME: {name}")
+        name = prompt("What is your first name? ")
+        yes_no = prompt(f"You entered {name}, is that correct y/n: ")
+        print(f"WELCOME, {name}")
+
+        
 
 if __name__ == "__main__":
     

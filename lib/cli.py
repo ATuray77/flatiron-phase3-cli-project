@@ -1,5 +1,5 @@
 from simple_term_menu import TerminalMenu
-from prettycli import red, yellow, green
+from prettycli import red, yellow, green, blue
 from models import Owner, Car
 #import ipdb; ipdb.set_trace()
 
@@ -14,6 +14,7 @@ class Cli():
         logged_in = True
 
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
+        print(blue("Please make a selection:"))
         options = ["Sign Up", "Car Owner", "New Customer", "Add a car", "Exit!"]
         if logged_in:
             options.append("Login")

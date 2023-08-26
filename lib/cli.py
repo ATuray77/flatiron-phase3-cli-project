@@ -5,13 +5,20 @@ from models import Owner, Car
 
 class Cli():
 
+    class Prompt():
+        def ask(self, question):
+            value = input(question)
+            return value
+    
     def __init__(self):
         current_owner = None
+        
 
     def start(self):
         self.clear_screen(20)
     
-        logged_in = True
+        logged_in = False
+        
 
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
         print(blue("Please make a selection:"))
@@ -24,9 +31,16 @@ class Cli():
         print("The index of the option we chose was:", menu_entry_index)
         print(green(f"You have selected {options[menu_entry_index]}!"))
 
+        self.get_first_name()
+
     def clear_screen(self, lines):
         print("\n" * lines)
 
+    
+    
+    def get_first_name():
+        name = prompt.ask("What is your first name?")
+        print(name)
 
 if __name__ == "__main__":
     

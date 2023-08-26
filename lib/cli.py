@@ -5,9 +5,12 @@ from models import Owner, Car
 
 class Cli():
 
-    
+    def __init__(self):
+        current_owner = None
 
     def start(self):
+        self.clear_screen(20)
+    
         logged_in = True
 
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
@@ -20,7 +23,8 @@ class Cli():
         print("The index of the option we chose was:", menu_entry_index)
         print(green(f"You have selected {options[menu_entry_index]}!"))
 
-    
+    def clear_screen(self, lines):
+        print("\n" * lines)
 
 
 if __name__ == "__main__":

@@ -15,6 +15,10 @@ class Cli():
         def yes_or_no(self, question):
             value = input(question + "y/n")
             return value == "y"
+        # get_car
+        def ask(self, question):
+            value = input(question)
+            return value
             
     
     def __init__(self):
@@ -40,6 +44,7 @@ class Cli():
         print(green(f"You have selected {options[menu_entry_index]}!"))
 
         self.get_first_name()
+        self.get_car()
 
     def clear_screen(self, lines):
         print("\n" * lines)
@@ -50,6 +55,11 @@ class Cli():
         name = prompt("What is your first name? ")
         yes_no = prompt(f"You entered {name}, is that correct y/n: ")
         print(f"WELCOME, {name}")
+    
+    def get_car(self):
+        mycar = prompt("What's the name of your car? ")
+        print(f"Yes we have your {mycar}")
+
 
         
 

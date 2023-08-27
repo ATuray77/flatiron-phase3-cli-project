@@ -7,6 +7,12 @@ name = "pypi"
 ipdb = "*"
 sqlalchemy = "*"
 alembic = "*"
+faker = "*"
+requests = "*"
+simple-term-menu = "*"
+prettycli = "*"
+prompt = "*"
+prompt-toolkit = "*"
 
 [dev-packages]
 

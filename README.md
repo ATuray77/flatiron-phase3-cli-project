@@ -16,9 +16,11 @@ use, you need to have a README.**
 # Program features
 ## cli.py
 ## car.py
-[1] Builds out the car table
+[1] Builds out the cars table
 ## owner.py
+[1] Builds out the owners table
 ## seed.py
+[1] This file contains data that populates the database
 ## session.py
 ## base.py
 

@@ -34,7 +34,7 @@ class Cli():
 
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
         print(blue("Please make a selection:"))
-        options = ["Sign Up", "Car Owner", "New Customer", "Add a car", "Exit!"]
+        options = ["Login", "Car Owner", "New Customer", "Add a car", "Exit!"]
         if logged_in:
             options.append("Login")
 

@@ -75,13 +75,14 @@ class Cli():
             print("Find a user by email")
         else:
             print(red("Invalid email. Please try again!"))
+            owner = Owner.find_or_create_by(email)
 
             #find owner by email
             #if we find it, set current_owner to the user that we find
             time.sleep(2)
             self.start()
             #find owner by email. if found, set current_owner to the user that we find
-            owner = Owner.find_or_create_by(email)
+           
     
     def add_a_car(self): # testing new failure
         newcus = prompt("Enter your first_name last_name username phone email: ")

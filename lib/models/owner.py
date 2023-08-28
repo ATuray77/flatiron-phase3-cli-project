@@ -16,8 +16,9 @@ class Owner(Base):
 
     #testing 
     @classmethod
-    def find_or_create_by(email):
-        
+    def find_or_create_by(cls, email):
+        import ipdb; ipdb.set_trace()
+
         pass
 
     def __repr__(self):

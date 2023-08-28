@@ -39,14 +39,14 @@ class Cli():
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
         print(blue("Please make a selection:"))
         options = ["Login", "Car Owner", "New Customer","Exit!"]
-        if logged_in:
-            options.append("Login")
+        for menu_entry_index in range(len(options)):  #testing
+            if logged_in:
+             options.append("Login")
 
         terminal_menu = TerminalMenu(options)
         menu_entry_index = terminal_menu.show()
         #print("The index of the option we chose was:", menu_entry_index)
         print(green(f"You have selected {options[menu_entry_index]}!"))
-
         if options[menu_entry_index] == "Login":
             self.handle_login()
         elif options[menu_entry_index] == "Car Owner":
@@ -56,6 +56,8 @@ class Cli():
             self.add_a_car()
         else:
             self.exit()
+            
+            
         
 
 
@@ -68,10 +70,11 @@ class Cli():
         newcus = prompt("Enter your first_name last_name username phone email: ")
         newcar = prompt("Enter car make_model " "color " "license_plate: ")
         print(f"Adding your profile: {newcus}") 
-        print(f"Adding your car: {newcar}")
+        print(f"Adding your car to our parking garage: {newcar}")
 
     def exit(self):
         print("Bye!")
+        
 
         self.get_first_name()
         self.get_car()

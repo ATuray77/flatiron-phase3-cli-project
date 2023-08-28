@@ -109,7 +109,7 @@ class Cli():
     def get_car(self):
         mycar = prompt("What's the name of your car? ")
         print(f"Yes, we have your {mycar}")
-        
+        self.start()
    
 
 

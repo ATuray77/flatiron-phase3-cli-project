@@ -10,6 +10,9 @@
 
 # Program features
 ## cli.py
+This files handles the functionality of the CLI portion of the code
+[1] Important packages and files that aid in its functionality are imported and or defined here
+    - simple_term_menu package handles the menu feature of the program
 ## car.py
 [1] Builds out the cars table
     - the __repr__ function defines the structure of the output display

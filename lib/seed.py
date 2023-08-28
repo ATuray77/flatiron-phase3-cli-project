@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from faker import Faker
 import requests
 import random
-import json
+#import json
 
 fake = Faker()
 

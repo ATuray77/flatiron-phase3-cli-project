@@ -29,6 +29,9 @@ use, you need to have a README.**
     - It imports sqlalchemy, base and session packages to aid in the migration of data to the database
 ## seed.py
 [1] This file contains data that populates the database
+[2] This file also imports important packages to enable its functionality
+[3] This file imports the sqlalchemy engine and session. The engine converts python language into sqlite vice versa. The session encapsulates the engine and makes communication with the subsequent database possible. 
+[3] THis package further defines the one-to-many relationship between the tables
 ## session.py
 ## base.py
 

@@ -8,11 +8,6 @@
 [3] Open the link a code editor of your choice.
 
 
-## Updating Your README.md
-
-**When you develop something that you want other people to
-use, you need to have a README.**
-
 # Program features
 ## cli.py
 ## car.py
@@ -24,15 +19,16 @@ use, you need to have a README.**
 ## owner.py
 [1] Builds out the owners table
     - the __repr__ function defines the structure of the output display
-
 [2] Imports important dependencies for the owners table
     - It imports sqlalchemy, base and session packages to aid in the migration of data to the database
+[3] This file further defines the one-to-many relationship between the owners table and the cars table
 ## seed.py
 [1] This file contains data that populates the database
 [2] This file also imports important packages to enable its functionality
 [3] This file imports the sqlalchemy engine and session. The engine converts python language into sqlite vice versa. The session encapsulates the engine and makes communication with the subsequent database possible. 
 [3] THis package further defines the one-to-many relationship between the tables
 ## session.py
+It is here that the sqlalchemy engine and session packages are imported and defined for subsequent imports to other files that need them.The engine that converts the python OOP language into sqlite is defined and the session that promotes the communication with the database is also defined. 
 ## base.py
 
 

@@ -14,6 +14,11 @@ class Owner(Base):
 
     cars = relationship("Car", backref="owner") # relationship
 
+    #testing 
+    @classmethod
+    def find_or_create_by(email):
+        pass
+
     def __repr__(self):
         return f"\n<Owner" \
             + f"id={self.id}, " \

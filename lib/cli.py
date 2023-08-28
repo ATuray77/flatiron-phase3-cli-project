@@ -3,6 +3,7 @@ from prettycli import red, yellow, green, blue
 from models import Owner, Car
 from prompt_toolkit import prompt
 #import prompt
+
 #import ipdb; ipdb.set_trace()
 
 class Cli():
@@ -19,7 +20,10 @@ class Cli():
         def ask(self, question):
             value = input(question)
             return value
-            
+
+        def handle_login(self, Login):   #Testing
+            print("Loggin in")
+
     
     def __init__(self):
         current_owner = None
@@ -34,7 +38,7 @@ class Cli():
 
         print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
         print(blue("Please make a selection:"))
-        options = ["Login", "Car Owner", "New Customer", "Add a car", "Exit!"]
+        options = ["Login", "Car Owner", "New Customer","Exit!"]
         if logged_in:
             options.append("Login")
 
@@ -42,6 +46,30 @@ class Cli():
         menu_entry_index = terminal_menu.show()
         #print("The index of the option we chose was:", menu_entry_index)
         print(green(f"You have selected {options[menu_entry_index]}!"))
+
+        if options[menu_entry_index] == "Login":
+            self.handle_login()
+        elif options[menu_entry_index] == "Car Owner":
+            self.get_first_name()
+            self.get_car()
+        elif options[menu_entry_index] == "New Customer": # testing new addition new failure
+            self.add_a_car()
+        else:
+            self.exit()
+        
+
+
+        #import ipdb; ipdb.set_trace()
+
+    def handle_login(self):    #testing
+        print("Logging in")
+    
+    def add_a_car(self): # testing new failure
+        newcar = prompt("Enter car make_model" "color" "license_plate") 
+        print(f"Adding your car: {newcar}")
+
+    def exit(self):
+        print("Bye!")
 
         self.get_first_name()
         self.get_car()
@@ -56,14 +84,13 @@ class Cli():
         yes_no = prompt(f"You entered {name}, is that correct y/n: ")
         print(f"WELCOME, {name}")
 
-        # if yes_no:
-        #     print("Collect last_name")
-        # else:
-        #     self.get_first_name()
+      
     
     def get_car(self):
         mycar = prompt("What's the name of your car? ")
         print(f"Yes, we have your {mycar}")
+    
+   
 
 
         

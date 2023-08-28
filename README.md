@@ -43,34 +43,8 @@ This files handles the functionality of the CLI portion of the code
 It is here that the sqlalchemy engine and session packages are imported and defined for subsequent imports to other files that need them.The engine that converts the python OOP language into sqlite is defined and the session that promotes the communication with the database is also defined. 
 ## base.py
 The declarative base is imported and defined here. This base is useful in the creation of objects/instances that are defined in the python class. This base is further imported by other files that need it. This helps to prevent duplication of code and the writing of clean code. 
-
-
-### What Goes into a README?
-
-This README should serve as a template for your own- go through the important
-files in your project and describe what they do. Each file that you edit
-(you can ignore your Alembic files) should get at least a paragraph. Each
-function should get a small blurb.
-
-You should descibe your actual CLI script first, and with a good level of
-detail. The rest should be ordered by importance to the user. (Probably
-functions next, then models.)
-
-Screenshots and links to resources that you used throughout are also useful to
-users and collaborators, but a little more syntactically complicated. Only add
-these in if you're feeling comfortable with Markdown.
-
-***
-
-## Conclusion
-
-A lot of work goes into a good CLI, but it all relies on concepts that you've
-practiced quite a bit by now. Hopefully this template and guide will get you
-off to a good start with your Phase 3 Project.
-
-Happy coding!
-
-***
+## __init__.py
+This files handles the initialiazation of critical folders and packages
 
 ## Resources
 

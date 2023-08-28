@@ -75,6 +75,7 @@ class Cli():
             print("Find a user by email")
         else:
             print(red("Invalid email. Please try again!"))
+            #find owner by email
             time.sleep(2)
             self.start()
             #find owner by email. if found, set current_owner to the user that we find

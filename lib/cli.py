@@ -75,11 +75,11 @@ class Cli():
             print("Find a user by email")
        
             owner = Owner.find_or_create_by(email) #find owner by email
-            print(f"Hello,{owner.email}")
+            #print(f"Hello,{owner.email}")
 
             self.current_owner = owner
             
-            print(f"Hello, {owner.email} 👋")
+            print(f"Hello, {owner.email} {owner.first_name} 👋")
             
             self.show_owner_options()
             
@@ -116,6 +116,7 @@ class Cli():
         newcar = prompt("Enter car make_model " "color " "license_plate: ")
         print(f"Adding your profile: {newcus}") 
         print(f"Adding your car to our parking garage: {newcar}")
+        self.start()
 
     def exit(self):
         print("Bye!")

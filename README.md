@@ -17,12 +17,16 @@ use, you need to have a README.**
 ## cli.py
 ## car.py
 [1] Builds out the cars table
-    - 
-[2] Imports important dependencies for the table
+    - the __repr__ function defines the structure of the output display
+[2] Imports important dependencies for the cars table
     - It imports sqlalchemy from which the foreign key and other table structures are included
     
 ## owner.py
 [1] Builds out the owners table
+    - the __repr__ function defines the structure of the output display
+
+[2] Imports important dependencies for the owners table
+    - It imports sqlalchemy, base and session packages to aid in the migration of data to the database
 ## seed.py
 [1] This file contains data that populates the database
 ## session.py

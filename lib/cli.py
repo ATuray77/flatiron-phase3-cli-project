@@ -65,7 +65,7 @@ class Cli():
         print("Logging in")
     
     def add_a_car(self): # testing new failure
-        newcar = prompt("Enter car make_model" "color" "license_plate") 
+        newcar = prompt("Enter car make_model " "color " "license_plate: ") 
         print(f"Adding your car: {newcar}")
 
     def exit(self):

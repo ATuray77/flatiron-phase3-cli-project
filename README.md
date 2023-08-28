@@ -15,7 +15,9 @@ This files handles the functionality of the CLI portion of the code
     - simple_term_menu package handles the menu feature of the program
     - prettycli package handles coloring or higlighted display of imortant lines in the code
     - prompt_toolkit package handles prompting functionality of the cli
-[2] 
+[2] The cars and owners table from the models folder are imported here to speed up the query process
+    - The interaction between the database and the cli is enabled here. 
+    - Querying the database, a key feature of the cli is made possible by this import.
 ## car.py
 [1] Builds out the cars table
     - the __repr__ function defines the structure of the output display

@@ -89,6 +89,17 @@ class Cli():
             time.sleep(2)
             self.start()
 
+    #creating get_owner_cars
+    def get_owner_cars(self):
+        email = prompt("Please enter your email:\n")
+        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        if re.fullmatch(regex, email):
+            owner = Owner.find_my_cars(email)
+            self.current_owner = owner
+        
+        
+    #creating get_owner_cars
+
     #under construction
     def show_owner_options(self):
         options = ["Car Owner", "New Customer","Exit!"]
@@ -104,8 +115,9 @@ class Cli():
             #find owner by email
 
         elif options[menu_entry_index] == "Car Owner":
-            self.get_first_name()
-            self.get_car()
+            self.get_owner_cars()
+            # self.get_first_name()
+            # self.get_car()
         elif options[menu_entry_index] == "New Customer": # testing new addition new failure
             self.add_a_car()
         else:

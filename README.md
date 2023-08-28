@@ -18,6 +18,7 @@ This files handles the functionality of the CLI portion of the code
 [2] The cars and owners table from the models folder are imported here to speed up the query process
     - The interaction between the database and the cli is enabled here. 
     - Querying the database, a key feature of the cli is made possible by this import.
+[3] The 'get name' function is defined here. This handles the prompting to get user input of their name
 ## car.py
 [1] Builds out the cars table
     - the __repr__ function defines the structure of the output display

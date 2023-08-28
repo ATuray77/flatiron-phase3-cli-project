@@ -3,6 +3,7 @@ from prettycli import red, yellow, green, blue
 from models import Owner, Car
 from prompt_toolkit import prompt
 import re
+import time
 #import prompt
 
 #import ipdb; ipdb.set_trace()
@@ -74,7 +75,8 @@ class Cli():
             print("Find a user by email")
         else:
             print(red("Invalid email. Please try again!"))
-            #self.start()
+            time.sleep(2)
+            self.start()
             #find owner by email. if found, set current_owner to the user that we find
             #owner = Owner.find_or_create_by(email)
     

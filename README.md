@@ -21,6 +21,9 @@ This files handles the functionality of the CLI portion of the code
 [3] The 'get name' function is defined here. This handles the prompting to get user input of their name
 [4] The 'clear_screen' function defined here, handles the clearing of the screen when the cli.py is ran. This    function presents a cleared and uncluttered screen for user inputs
 [5] The 'get_car' function is defined and execued here. This handles the collects the user's input and retrieval of car information
+[6] The 'handle_login' function handles customer login
+[7] The 'add_a_car' function handles new customer adding new car to the database
+
 
 ## migration
 The migration folder contains the migration history and other critical configuration files that are mofified for the movement of data to and from the database. 

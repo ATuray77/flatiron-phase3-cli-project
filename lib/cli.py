@@ -79,7 +79,7 @@ class Cli():
 
             self.current_owner = owner
             
-            print(f"Hello, {owner.email} {owner.first_name} 👋")
+            print(f"Hello, {owner.first_name}! {owner.email} 👋")
             
             self.show_owner_options()
             

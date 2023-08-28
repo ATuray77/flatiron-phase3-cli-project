@@ -2,6 +2,7 @@ from simple_term_menu import TerminalMenu
 from prettycli import red, yellow, green, blue
 from models import Owner, Car
 from prompt_toolkit import prompt
+import re
 #import prompt
 
 #import ipdb; ipdb.set_trace()
@@ -21,8 +22,8 @@ class Cli():
             value = input(question)
             return value
 
-        def handle_login(self, Login):   #Testing
-            print("Loggin in")
+        # def handle_login(self, Login):   #Testing
+        #     print("Loggin in")
 
     
     def __init__(self):
@@ -41,7 +42,7 @@ class Cli():
         options = ["Login", "Car Owner", "New Customer","Exit!"]
         for menu_entry_index in range(len(options)):  #testing
             if logged_in:
-             options.append("Login")
+                options.append("Login")
 
         terminal_menu = TerminalMenu(options)
         menu_entry_index = terminal_menu.show()
@@ -68,7 +69,14 @@ class Cli():
 
     def handle_login(self):    #testing
         email = prompt("Please enter your email:\n")
-        print(email)
+        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        if re.fullmatch(regex, email):
+            print("Find a user by email")
+        else:
+            print(red("Invalid email. Please try again!"))
+            #self.start()
+            #find owner by email. if found, set current_owner to the user that we find
+            #owner = Owner.find_or_create_by(email)
     
     def add_a_car(self): # testing new failure
         newcus = prompt("Enter your first_name last_name username phone email: ")
@@ -78,10 +86,12 @@ class Cli():
 
     def exit(self):
         print("Bye!")
+    
         
 
-        self.get_first_name()
-        self.get_car()
+        # self.get_first_name()
+        # self.get_car()
+
 
     def clear_screen(self, lines):
         print("\n" * lines)
@@ -90,15 +100,16 @@ class Cli():
     
     def get_first_name(self):
         name = prompt("What is your first name? ")
-        yes_no = prompt(f"You entered {name}, is that correct y/n: ")
+        #yes_no = prompt(f"You entered {name}, is that correct y/n: ")
         print(f"WELCOME, {name}")
+        #self.start()
 
       
     
     def get_car(self):
         mycar = prompt("What's the name of your car? ")
         print(f"Yes, we have your {mycar}")
-    
+        
    
 
 

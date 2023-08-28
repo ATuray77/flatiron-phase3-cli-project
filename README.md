@@ -30,6 +30,7 @@
 ## session.py
 It is here that the sqlalchemy engine and session packages are imported and defined for subsequent imports to other files that need them.The engine that converts the python OOP language into sqlite is defined and the session that promotes the communication with the database is also defined. 
 ## base.py
+The declarative base is imported and defined here. This base is useful in the creation of objects/instances that are defined in the python class. This base is further imported by other files that need it. This helps to prevent duplication of code and the writing of clean code. 
 
 
 ### What Goes into a README?

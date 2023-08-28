@@ -9,6 +9,7 @@
 
 
 # Program features
+This CLI program works with a backend database called parkingGarage. This database consists of owners table and cars table. In the CLI car owners have to login with their email addresses before thay can access their cars. 
 ## cli.py
 This files handles the functionality of the CLI portion of the code
 [1] Important packages and files that aid in its functionality are imported and or defined here

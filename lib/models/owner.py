@@ -17,6 +17,7 @@ class Owner(Base):
     #testing 
     @classmethod
     def find_or_create_by(email):
+        
         pass
 
     def __repr__(self):

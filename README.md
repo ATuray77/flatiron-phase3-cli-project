@@ -19,6 +19,7 @@ This files handles the functionality of the CLI portion of the code
     - The interaction between the database and the cli is enabled here. 
     - Querying the database, a key feature of the cli is made possible by this import.
 [3] The 'get name' function is defined here. This handles the prompting to get user input of their name
+[4] The 'clear_screen' function defined here, handles the clearing of the screen when the cli.py is ran. This function presents a cleared and uncluttered screen for user inputs
 ## car.py
 [1] Builds out the cars table
     - the __repr__ function defines the structure of the output display

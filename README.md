@@ -17,6 +17,10 @@ use, you need to have a README.**
 ## cli.py
 ## car.py
 [1] Builds out the cars table
+    - 
+[2] Imports important dependencies for the table
+    - It imports sqlalchemy from which the foreign key and other table structures are included
+    
 ## owner.py
 [1] Builds out the owners table
 ## seed.py

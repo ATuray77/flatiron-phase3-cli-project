@@ -49,6 +49,9 @@ class Cli():
         print(green(f"You have selected {options[menu_entry_index]}!"))
         if options[menu_entry_index] == "Login":
             self.handle_login()
+            #get an email
+            #find owner by email
+
         elif options[menu_entry_index] == "Car Owner":
             self.get_first_name()
             self.get_car()
@@ -64,7 +67,8 @@ class Cli():
         #import ipdb; ipdb.set_trace()
 
     def handle_login(self):    #testing
-        print("Logging in")
+        email = prompt("Please enter your email:\n")
+        print(email)
     
     def add_a_car(self): # testing new failure
         newcus = prompt("Enter your first_name last_name username phone email: ")

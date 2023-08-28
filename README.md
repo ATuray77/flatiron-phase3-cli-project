@@ -22,6 +22,9 @@ This files handles the functionality of the CLI portion of the code
 [4] The 'clear_screen' function defined here, handles the clearing of the screen when the cli.py is ran. This    function presents a cleared and uncluttered screen for user inputs
 [5] The 'get_car' function is defined and execued here. This handles the collects the user's input and retrieval of car information
 
+## migration
+The migration folder contains the migration history and other critical configuration files that are mofified for the movement of data to and from the database. 
+
 ## car.py
 [1] Builds out the cars table
     - the __repr__ function defines the structure of the output display

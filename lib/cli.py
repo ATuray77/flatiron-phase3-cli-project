@@ -1,5 +1,6 @@
 from simple_term_menu import TerminalMenu
-from prettycli import red, yellow, green, blue
+from prettycli import  red, yellow, green, blue, white, cyan, magenta
+from prettycli.colorizer import bright_yellow
 from models import Owner, Car
 from prompt_toolkit import prompt
 import re
@@ -38,9 +39,9 @@ class Cli():
         
         
 
-        print(yellow("WELCOME TO TURAY'S PARKING GARAGE!\n"))
+        print(bright_yellow("WELCOME TO TURAY'S PARKING GARAGE!\n").bold())
         print(blue("Please make a selection:"))
-        options = ["Login", "Car Owner", "New Customer","Exit!"]
+        options = ["Login", "Exit!"]
         for menu_entry_index in range(len(options)):  #testing
             if logged_in:
                 options.append("Login")
@@ -79,7 +80,7 @@ class Cli():
 
             self.current_owner = owner
             
-            print(f"Hello, {owner.first_name}! {owner.email} 👋")
+            print(cyan(f"Hello, {owner.first_name}! {owner.email} 👋"))
             
             self.show_owner_options()
             
@@ -119,7 +120,7 @@ class Cli():
         self.start()
 
     def exit(self):
-        print("Bye!")
+        print(magenta("Bye!"))
     
         
 

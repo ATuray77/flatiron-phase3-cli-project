@@ -73,16 +73,43 @@ class Cli():
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
         if re.fullmatch(regex, email):
             print("Find a user by email")
-        else:
-            print(red("Invalid email. Please try again!"))
-            owner = Owner.find_or_create_by(email)
+       
+            owner = Owner.find_or_create_by(email) #find owner by email
+            print(f"Hello,{owner.email}")
 
-            #find owner by email
-            #if we find it, set current_owner to the user that we find
+            self.current_owner = owner
+            
+            print(f"Hello, {owner.email} 👋")
+            
+            self.show_owner_options()
+            
+        else:
+            print(red("Invalid email. Please try again!")) 
             time.sleep(2)
             self.start()
-            #find owner by email. if found, set current_owner to the user that we find
-           
+
+    #under construction
+    def show_owner_options(self):
+        options = ["Car Owner", "New Customer","Exit!"]
+        terminal_menu = TerminalMenu(options)
+        menu_entry_index = terminal_menu.show() 
+        
+        print(options[menu_entry_index])
+        #print("The index of the option we chose was:", menu_entry_index)
+        print(green(f"You have selected {options[menu_entry_index]}!"))
+        if options[menu_entry_index] == "Login":
+            self.handle_login()
+            #get an email
+            #find owner by email
+
+        elif options[menu_entry_index] == "Car Owner":
+            self.get_first_name()
+            self.get_car()
+        elif options[menu_entry_index] == "New Customer": # testing new addition new failure
+            self.add_a_car()
+        else:
+            self.exit()
+    # top is under construction   
     
     def add_a_car(self): # testing new failure
         newcus = prompt("Enter your first_name last_name username phone email: ")

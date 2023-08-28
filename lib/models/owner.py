@@ -17,9 +17,19 @@ class Owner(Base):
     #testing 
     @classmethod
     def find_or_create_by(cls, email):
-        import ipdb; ipdb.set_trace()
+        owner = session.query(cls).filter(cls.email.like(email)).first()
+        if owner:
+            return owner
+        else:
+            owner = Owner(email=email)
+            session.add(owner)
+            session.commit()
+            return owner
 
-        pass
+
+        #import ipdb; ipdb.set_trace()
+
+        
 
     def __repr__(self):
         return f"\n<Owner" \

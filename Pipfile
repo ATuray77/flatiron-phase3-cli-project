@@ -13,6 +13,7 @@ simple-term-menu = "*"
 prettycli = "*"
 prompt = "*"
 prompt-toolkit = "*"
+banner = "*"
 
 [dev-packages]
 

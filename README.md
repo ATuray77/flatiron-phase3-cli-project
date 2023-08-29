@@ -9,7 +9,7 @@
 
 
 # Program features
-This CLI program works with a backend database called parkingGarage. This database consists of owners table and cars table. In the CLI car owners have to login with their email addresses before thay can access their cars. 
+This CLI program works with a backend database called parkingGarage. This database consists of owners table and cars table. In the CLI car owners have to login with their email addresses before thay can access their cars. With their email address supplied, they can then see all the cars they owned. 
 ## cli.py
 This files handles the functionality of the CLI portion of the code
 [1] Important packages and files that aid in its functionality are imported and or defined here
@@ -52,6 +52,9 @@ It is here that the sqlalchemy engine and session packages are imported and defi
 The declarative base is imported and defined here. This base is useful in the creation of objects/instances that are defined in the python class. This base is further imported by other files that need it. This helps to prevent duplication of code and the writing of clean code. 
 ## __init__.py
 This files handles the initialiazation of critical folders and packages
+
+## banners.py
+This file contains the decorations for the welcome banner message
 
 ## Resources
 

@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from .base import Base
 from .session import session
+from .car import Car
 
 class Owner(Base):
     __tablename__ = "owners"
@@ -14,17 +15,21 @@ class Owner(Base):
 
     cars = relationship("Car", backref="owner") # relationship
 
-    #creating get_owner_cars
+    #creating get_owner_cars - WORK-IN-PROGRESS
+
     @classmethod
     def find_my_cars(cls, email):
         owner = session.query(cls).filter(cls.email.like(email)).first()
         if owner is None:
-            print(f"No owner found with that email")
+            print(f"No owner found with email")
         else:
-            print(f"Cars owned by {owner.first_name} {owner.last_name}:")
-            for car in owner.cars:
-                print(f"{car.make_model}, {car.color}, {car.license_plate}")
-    #creating get_owner_cars
+            return owner
+        #     print(f"Cars owned by {owner.first_name} {owner.last_name}:")
+        # for car in owner.cars:
+        #     print(f"{car.make_model}, {car.color}, {car.license_plate}")
+
+    #creating get_owner_cars - WORK-IN-PROGRESS
+
     @classmethod
     def find_or_create_by(cls, email):
         owner = session.query(cls).filter(cls.email.like(email)).first()

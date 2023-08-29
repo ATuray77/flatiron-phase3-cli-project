@@ -3,6 +3,7 @@ from prettycli import  red, yellow, green, blue, white, cyan, magenta
 from prettycli.colorizer import bright_yellow
 from models import Owner, Car
 from prompt_toolkit import prompt
+from banner import Banner
 import re
 import time
 #import prompt
@@ -34,6 +35,8 @@ class Cli():
 
     def start(self):
         self.clear_screen(20)
+        banner = Banner()
+        banner.welcome()
     
         logged_in = False
         
@@ -89,16 +92,21 @@ class Cli():
             time.sleep(2)
             self.start()
 
-    #creating get_owner_cars
+    #creating get_owner_cars - WORK-IN-PROGRESS
     def get_owner_cars(self):
-        email = prompt("Please enter your email:\n")
+        email = prompt("Please enter your email so you can see all your cars:\n")
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
         if re.fullmatch(regex, email):
             owner = Owner.find_my_cars(email)
+            
             self.current_owner = owner
-        
-        
-    #creating get_owner_cars
+            print(f"Cars owned by {owner.first_name} {owner.last_name}:")
+        for car in owner.cars:
+            print(f"{car.make_model}, {car.color}, {car.license_plate}")
+     
+    #creating get_owner_cars - WORK-IN-PROGRESS
+
+
 
     #under construction
     def show_owner_options(self):

@@ -34,7 +34,7 @@ class Cli():
         
 
     def start(self):
-        self.clear_screen(20)
+        self.clear_screen(10)
         banner = Banner()
         banner.welcome()
     
@@ -42,7 +42,7 @@ class Cli():
         
         
 
-        print(bright_yellow("WELCOME TO TURAY'S PARKING GARAGE!\n").bold())
+        print(bright_yellow("TURAY'S PARKING GARAGE - SAFETY & COURTECY!\n").bold())
         print(blue("Please make a selection:"))
         options = ["Login", "Exit!"]
         for menu_entry_index in range(len(options)):  #testing
@@ -76,7 +76,6 @@ class Cli():
         email = prompt("Please enter your email:\n")
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
         if re.fullmatch(regex, email):
-            print("Find a user by email")
        
             owner = Owner.find_or_create_by(email) #find owner by email
             #print(f"Hello,{owner.email}")
@@ -100,7 +99,7 @@ class Cli():
             owner = Owner.find_my_cars(email)
             
             self.current_owner = owner
-            print(f"Cars owned by {owner.first_name} {owner.last_name}:")
+            print(magenta(f"Cars owned by {owner.first_name} {owner.last_name}:").bold())
         for car in owner.cars:
             print(f"{car.make_model}, {car.color}, {car.license_plate}")
      

@@ -34,7 +34,7 @@ class Cli():
         
 
     def start(self):
-        self.clear_screen(10)
+        self.clear_screen(5)
         banner = Banner()
         banner.welcome()
     

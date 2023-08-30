@@ -4,8 +4,9 @@
 [1] click on the link then create a fork 
     - https://github.com/ATuray77/flatiron-phase3-cli-project/
 [2] Open your terminal then clone it locally then navigate to the folder
-[3] Open the link a code editor of your choice.
-    - install pipenv, then pipenv shell get into an environment that presents you with all your dependencies. 
+[3] Open the link a code editor of your choice and install the following:
+    `$ pipenv install; pipenv shell`
+   
 
 
 # Program features

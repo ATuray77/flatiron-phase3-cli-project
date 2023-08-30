@@ -3,7 +3,7 @@ from models import Owner, Car
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from faker import Faker
-import requests
+#import requests
 import random
 #import json
 
